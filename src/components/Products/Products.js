@@ -16,10 +16,13 @@ function Products() {
         target: ref
     });
 
-    const till = window.innerWidth <= 800 ? "0%" : "-75%";
+    const [till, setTill] = useState("-75%");
 
     const x = useTransform(scrollYProgress, [0, 1], ["0%", till]);
 
+    useEffect(()=>{
+        setTill(window.innerWidth <= 800 ? "0%" : "-75%");
+    }, [])
 
 
 
