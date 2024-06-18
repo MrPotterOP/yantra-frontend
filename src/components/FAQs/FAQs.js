@@ -28,7 +28,7 @@ function FAQs() {
             <div className={styles.faqsTitle}>
                 <p className={styles.titleText}>FAQS</p>
 
-                <h1 className={styles.title}>Response to FAQ's</h1>
+                <h1 className={styles.title}>Response to FAQs</h1>
             </div>
 
             <div className={styles.faqsBox}>
