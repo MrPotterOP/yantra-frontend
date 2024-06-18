@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import styles from './styles.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Navbar() {
 

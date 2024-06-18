@@ -47,7 +47,7 @@
     text-transform: uppercase;
     padding: 40px 18px 0 22px;
 
-    margin-top: -128px;
+    margin-top: -155px;
 }
 
 .heroContent h1 {
@@ -99,7 +99,7 @@
     position: absolute;
     bottom: -1px;
     right: 0;
-    width: 390px;
+    width: 320px;
     background-color: var(--color-white);
     padding: 16px;
 }

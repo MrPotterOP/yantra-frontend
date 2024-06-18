@@ -41,7 +41,7 @@ function Footer() {
 
                     <div className={styles.inputBox}>
 
-                        <input type="email" placeholder="Your Email (name@example.com)"></input>
+                        <input type="email" placeholder="name@example.com"></input>
 
                         <button className={styles.cta}>
                             <p>Sey Hello</p>
