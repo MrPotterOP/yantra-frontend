@@ -1,0 +1,108 @@
+#about {
+    margin: 80px 0;
+}
+
+.aboutTitle {
+    margin: 0 10px 80px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.aboutTitle p {
+    font-size: var(--fs-p2);
+}
+
+.aboutTitle h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-light);
+    text-transform: uppercase;
+}
+
+
+.aboutBox {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.aboutBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    filter: brightness(.85);
+}
+
+.aboutTextBox {
+    background-color: var(--color-white);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85%;
+}
+
+.aboutBox .aboutTextBox:last-child {
+    top: unset;
+    bottom: 0;
+    left: 0;
+}
+
+
+@media (min-width: 62em) {
+    #about {
+        margin: 100px 0;
+    }
+    
+    .aboutTitle {
+        margin: 0 10px 80px 300px;
+    }
+    
+    .aboutBox {
+        flex-direction: row;
+        gap: 10px;
+        height: 84vh;
+    }
+    
+    .aboutBox img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .aboutBox img:first-child {
+        width: 50%;
+        height: 100%;
+    }
+    
+    .aboutTextBox {
+        background-color: var(--color-white);
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 85%;
+    }
+    
+    .aboutBox .aboutTextBox:last-child {
+        top: unset;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+

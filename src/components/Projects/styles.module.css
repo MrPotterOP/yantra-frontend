@@ -1,0 +1,139 @@
+#projects {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.projectsTitle {
+    margin: 0 10px 40px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.projectsTitle h1 {
+    font-weight: var(--fw-light);
+    text-transform: uppercase;
+}
+
+.projectsBoxLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align: right;
+}
+
+.projectImage {
+    width: 320px;
+    height: 440px;
+    overflow: hidden;
+
+    background-color: var(--color-black);
+}
+
+.projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projectInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 0 8px;
+    width: 320px;
+}
+
+
+.projectsBoxRight {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.projectsBoxRight .project:first-child {
+    align-self: flex-end;
+
+    text-align: left;
+}
+
+
+@media (min-width: 62em) {
+    #projects {
+        margin: 140px 0;
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+
+        width: 100%;
+    }
+    
+    .projectsTitle {
+        margin: 0 10px 60px 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .projectsTitle h1 {
+        max-width: 50%;
+    }
+    
+    .projectsBoxLeft {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .project {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .projectImage {
+        width: 600px;
+        height: 710px;
+        overflow: hidden;
+    
+        background-color: var(--color-black);
+    }
+    
+    .projectImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .projectInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    
+        padding: 0 8px;
+        width: 600px;
+    }
+    
+    
+    .projectsBoxRight {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        margin: 10px 0 0 0;
+    }
+    
+    .projectsBoxRight .project:first-child {
+        align-self: flex-end;
+    }
+}

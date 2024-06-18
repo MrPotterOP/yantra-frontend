@@ -1,0 +1,173 @@
+#products {
+    margin: 80px 0;
+}
+
+.productsTitle {
+    margin: 0 10px 80px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.productsTitle h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-light);
+    text-transform: uppercase;
+}
+
+.productsBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 80px;
+
+    padding: 0 20px;
+
+    overflow: auto;
+
+    transition: all .4s ease-in-out;
+}
+
+.productsBox::-webkit-scrollbar {
+    height: 4px;
+
+    background-color: var(--color-dimWhite);
+    border-radius: 1em;
+
+
+}
+
+.productsBox::-webkit-scrollbar-track {
+    margin: 50px 20px;
+}
+
+.productsBox::-webkit-scrollbar-thumb {
+    background-color: var(--color-grey);
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.productImage {
+    position: relative;
+    width: 320px;
+    height: 430px;
+    overflow: hidden;
+    background-color: var(--color-black);
+
+    cursor: pointer;
+}
+
+.productImage:hover img{
+    opacity: 0.2;
+}
+
+.productImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.69;
+
+    transition: opacity .4s ease-in-out;
+}
+
+
+
+.productFeatures {
+    color: var(--color-white);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+
+.productFeatures ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    font-size: var(--fs-p2);
+    font-weight: var(--fw-medium);
+}
+
+.productImage:hover .productFeatures {
+    opacity: 1;
+}
+
+
+.productContext {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    width: 320px;
+
+    margin-bottom: 30px;
+}
+
+
+@media (min-width: 62em) {
+    
+    #products {
+        margin: 100px 0;
+        height: 2890px;
+    }
+    
+    .productsTitle {
+        margin: 0 10px 80px 100px;
+        width: 60%;
+    }
+    
+    .productsBox {
+        padding: 0 100px;
+        transition: none;
+
+        overflow: visible;
+
+        position: sticky;
+        top: 60px;
+        left: 0;
+    }
+    
+    .productsBox::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .productsBox::-webkit-scrollbar-track {
+        display: none;
+    }
+    
+    .productsBox::-webkit-scrollbar-thumb {
+        display: none;
+    }
+    
+    .product {
+        gap: 24px;
+    }
+    
+    .productImage {
+        width: 340px;
+        height: 460px;
+    }
+    
+    .productContext {
+        width: 340px;
+    }
+
+}
+
+
+

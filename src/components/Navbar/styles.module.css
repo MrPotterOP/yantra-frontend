@@ -1,0 +1,140 @@
+#navbar {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 111;
+    width: 100%;
+    top: 28px;
+}
+
+.navBox {
+    margin: 0 auto;
+    padding: 14px 24px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    border: 1px solid var(--color-white);
+
+        gap: auto;
+        width: calc(100% - 60px);
+        margin: 0 30px;
+}
+
+.navLogo {
+    width: 161px;
+    height: 44px;
+}
+
+.navMenu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    gap: 24px;
+    top: 100%;
+    left: -100vw;
+    padding: 24px;
+    background-color: var(--color-white);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.navMenu li {
+    list-style: none;
+}
+
+.navMenu li a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.btnCta {
+    display: none;
+}
+
+.navMenu.active {
+    opacity: 1;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+
+@media (min-width: 62em) {
+    .navBox {
+        gap: 60px;
+    }
+    .navMenu {
+        flex-direction: row;
+        position: inherit;
+        align-items: center;
+        gap: 24px;
+        padding: 0;
+        background-color: transparent;
+        opacity: 1;
+    }
+    
+    .navMenu li a {
+        font-size: var(--fs-p);
+        color: var(--color-white);
+    }
+    
+    .btnCta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 16px;
+        background-color: var(--color-dimWhite);
+        color: var(--color-black);
+        border: none;
+    }
+
+    .btnCta a {
+        color: var(--color-black);
+        width: max-content;
+        font-size: var(--fs-p2);
+    }
+
+    .btnCta img {
+        width: 24px;
+        height: 24px;
+        transform: rotate(-49deg);
+    }
+
+    
+    .hamburger {
+        display: none;
+    }
+}
+
+
+@media (min-width: 70em) {
+    .navBox {
+        gap: auto;
+        width: calc(100% - 60px);
+        margin: 0 30px;
+    }
+
+    .navMenu {
+        width: max-content;
+    }
+}
+
