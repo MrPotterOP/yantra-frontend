@@ -10,7 +10,7 @@
 
 .navBox {
     margin: 0 auto;
-    padding: 14px 24px;
+    padding: 14px 10px;
     width: max-content;
     display: flex;
     align-items: center;
@@ -81,6 +81,7 @@
 @media (min-width: 62em) {
     .navBox {
         gap: 60px;
+        padding: 14px 24px;
     }
     .navMenu {
         flex-direction: row;
