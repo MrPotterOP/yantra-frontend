@@ -6,7 +6,7 @@
     margin: 0 10px 40px 20px;
     display: flex;
     align-items: flex-start;
-    gap: 40px;
+    gap: 20px;
 }
 
 .faqsTitle h1 {
@@ -18,7 +18,7 @@
 .faqsBox {
     display: flex;
     flex-direction: column;
-    padding: 20px 10px 20px 90px;
+    padding: 20px 10px 20px 10px;
 }
 
 .faq {
