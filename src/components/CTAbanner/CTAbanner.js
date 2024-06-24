@@ -14,7 +14,7 @@ function CTAbanner() {
                 <div className={styles.bannerContext}>
 
                     <div className={styles.contextBox}>
-                        <h1>UPGRADE YOUR PROPERTY NOW</h1>
+                        <h1>Experience the Best in Window Innovation</h1>
 
                         <Link href="/contact">
                             <p>Book a Call</p>

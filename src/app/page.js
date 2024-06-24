@@ -19,7 +19,6 @@ export default function Home() {
       <InfiniteScrollImages />
       <About />
       <Advantages />
-      <Services />
       <Products />
       <Projects />
       <Team />

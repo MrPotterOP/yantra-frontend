@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react';
 import styles from './styles.module.css';
 import Image from 'next/image';
 
+import { motion } from 'framer-motion';
+
+
 function Hero() {
   const [slide, setSlide] = useState({
     activeSlide: 0,
@@ -24,7 +27,11 @@ function Hero() {
   return (
     <section id={styles.hero}>
       <div className={styles.heroBox}>
-        <div className={styles.heroImagesSlide}>
+        <motion.div className={styles.heroImagesSlide}
+          initial={{ opacity: 0.6, scale: 1.2 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
+        >
           <Image
             className={slide.activeSlide === 0 ? styles.active : ''}
             src="/images/hero1.jpeg"
@@ -46,12 +53,27 @@ function Hero() {
             width={2000}
             height={1180}
           />
-        </div>
+        </motion.div>
+
+        <motion.div 
+        initial={{ opacity: 0, x: 80 }}
+        animate={{ opacity: 1, x: 0 }}
+        className={styles.heroNavigation} onClick={() => setSlide((prevSlide) => ({ ...prevSlide, activeSlide: (prevSlide.activeSlide + 1) % 3 }))}> 
+            <Image src="/images/outline-arrow.png" alt="Arrow" width={40} height={40} />
+        </motion.div>
 
         <div className={styles.heroContent}>
-          <h1>enabling <br /> innovative living environment</h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
+          >enabling <br /> innovative living environment</motion.h1>
 
-          <div className={styles.heroSliderBars}>
+          <motion.div className={styles.heroSliderBars}
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
+          >
             {[0, 1, 2].map((item, index) => (
               <div
                 key={index}
@@ -62,19 +84,27 @@ function Hero() {
                 <div className={styles.sliderBarProgress}></div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
-        <div className={styles.heroDescriptionBox}>
+
+        <motion.div className={styles.heroDescriptionBox}
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
+        >
           <p>
             You have a home to make and we have a product for you. We provide
             tailor-made home solutions for Doors, Windows, Balustrades,
             Retractable & Fixed Glass Roofs, and Pergolas.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 }
 
 export default Hero;
+
+
+           

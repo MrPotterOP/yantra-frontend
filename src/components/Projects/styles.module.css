@@ -24,12 +24,19 @@
 }
 
 
+
+
 .project {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
     text-align: right;
+}
+.projectsBoxLeft .project.right {
+    text-align: left;
+
+    align-self: flex-end;
 }
 
 .projectImage {
@@ -62,7 +69,7 @@
     gap: 70px;
 }
 
-.projectsBoxRight .project:first-child {
+.projectsBoxRight .project:first-child, .projectsBoxRight .project:last-child {
     align-self: flex-end;
 
     text-align: left;
@@ -93,13 +100,19 @@
     .projectsBoxLeft {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 100px;
     }
     
     .project {
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+
+    .projectsBoxLeft .project.right {
+        text-align: right;
+    
+        align-self: flex-start;
     }
     
     .projectImage {

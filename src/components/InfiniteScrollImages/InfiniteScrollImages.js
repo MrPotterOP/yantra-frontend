@@ -1,5 +1,9 @@
+'use client';
+
 import Image from "next/image";
 import styles from './styles.module.css';
+
+import { motion } from "framer-motion";
 
 
 function InfiniteScrollImages() {
@@ -8,18 +12,21 @@ function InfiniteScrollImages() {
         "/images/company1.png",
         "/images/company2.png",
         "/images/company3.png",
-        "/images/company4.png",
         "/images/company5.png",
         "/images/company6.png",
         "/images/company7.png",
-        "/images/company8.png",
     ];
 
 
     return ( 
         <section id={styles.infiniteScrollImages}>
 
-            <div className={styles.scroll}>
+            <motion.div className={styles.scroll}
+                initial={{ opacity: 0.6, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: 'easeInOut' }}
+            >
 
                 <div>
 
@@ -52,7 +59,7 @@ function InfiniteScrollImages() {
 
 
                 
-            </div>
+            </motion.div>
 
         </section>
      );

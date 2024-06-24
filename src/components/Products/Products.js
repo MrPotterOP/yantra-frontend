@@ -30,13 +30,19 @@ function Products() {
         <section id={styles.products} ref={ref}>
 
             <div className={styles.productsTitle}>
-                <h1>We Offer products like</h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: 'easeInOut' }}
+                >We Offer products like</motion.h1>
             </div>
 
             <motion.div 
             style={{ x }} className={styles.productsBox}>
 
-                <div className={styles.product}>
+                <div
+                 className={styles.product}>
                     <div className={styles.productImage}>
                         <Image src="/images/product1.jpg" alt="Product Image" width={500} height={900} />
 

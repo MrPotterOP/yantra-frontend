@@ -78,6 +78,75 @@
 }
 
 
+/* Menu Link Hover Effect */
+
+
+.navMenu a {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    flex-grow: 1;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+.navMenu a span {
+    display: block;
+    transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navMenu a:after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    content: attr(data-hover);
+    display: inline;
+    text-align: center;
+    transition: top 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navMenu a:hover span {
+    transform: translateY(-100%);
+}
+
+.navMenu a:hover:after {
+    top: 0;
+}
+
+.navMenu a:active {
+    animation-name: rubberBand;
+}
+
+@keyframes rubberBand {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 @media (min-width: 62em) {
     .navBox {
         gap: 60px;
@@ -103,9 +172,13 @@
         align-items: center;
         gap: 10px;
         padding: 8px 16px;
-        background-color: var(--color-dimWhite);
+        background-color: #F5F5F5;
         color: var(--color-black);
         border: none;
+
+        cursor: pointer;
+
+        transition: all .2s ease-in-out;
     }
 
     .btnCta a {
@@ -119,6 +192,19 @@
         height: 24px;
         transform: rotate(-49deg);
     }
+
+    .btnCta:hover {
+        background-color: var(--color-grey);
+    }
+
+    .btnCta:hover a {
+        color: var(--color-white);
+    }
+
+    .btnCta:hover img {
+        filter: invert(1);
+    }
+
 
     
     .hamburger {

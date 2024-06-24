@@ -42,7 +42,7 @@
 }
 
 .faqQuestion p {
-    font-size: var(--fs-h3);
+    font-size: var(--fs-p1);
     padding: 20px 0;
 }
 
@@ -152,7 +152,7 @@
     }
     
     .faqQuestion p {
-        font-size: var(--fs-h3);
+        font-size: 22px;
         padding: 28px 0;
     }
 

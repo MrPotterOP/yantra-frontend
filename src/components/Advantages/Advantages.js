@@ -4,6 +4,8 @@ import styles from './styles.module.css';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
+import { motion } from 'framer-motion';
+
 function Advantages() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -19,22 +21,38 @@ function Advantages() {
   return (
         <section id={styles.advantages}>
                     <div className={styles.advantagesBox}>
-                        <div className={styles.advantagesBg}>
+                        <motion.div 
+                        initial={{ opacity: 0.6, scale: 1.2 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: 'easeInOut' }}
+                        className={styles.advantagesBg}>
                             <Image
                                 src="/images/adv_bg.jpeg"
                                 alt="advanyages background"
                                 width={1200}
                                 height={1400}
                             />
-                        </div>
+                        </motion.div>
 
-                        <div className={styles.advantagesTitle}>
+                        <motion.div 
+                        initial={{ opacity: 0.6, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
+                        className={styles.advantagesTitle}>
                             <p>WHY CHOOSE US</p>
 
                             <h1>OUR ADVANTAGES</h1>
-                        </div>
+                        </motion.div>
 
-                        <div className={styles.advantagesList}>
+                        <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
+
+                        className={styles.advantagesList}>
                             <div className={`${styles.advantagesItem} ${activeIndex === 0 ? styles.active : ''}`} onClick={()=> setActiveIndex(0)} >
                                 <div className={styles.advantagesIcon}>
                                     <Image
@@ -128,7 +146,7 @@ function Advantages() {
                                 </div>
                             </div>
 
-                        </div>
+                        </motion.div>
                     </div>
         </section>
   );

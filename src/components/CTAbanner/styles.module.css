@@ -82,6 +82,17 @@
     transform: rotate(-49deg);
 }
 
+.contextBox a:hover {
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    transition: background-color .3s ease-in-out;
+}
+
+.contextBox a:hover img {
+    filter: invert(1);
+}
+
+
 
 @media (min-width: 62em){
     .bannerBox, .bgGrad, .bannerContext {

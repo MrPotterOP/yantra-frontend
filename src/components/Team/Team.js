@@ -1,15 +1,39 @@
+'use client';
 import styles from './styles.module.css';
 
 import Image from 'next/image';
 
+import { motion } from 'framer-motion';
+
 function Team() {
+
+    const hidden = {
+        opacity: 0,
+        y: 50
+    }
+
+    const visible = {
+        opacity: 1,
+        y: 0
+    }
+
+    const transition = {
+        duration: 1,
+        ease: 'easeInOut'
+    }
+
     return ( 
         <section id={styles.team}>
-            <div className={styles.teamTitle}>
+            <motion.div 
+                initial={hidden}
+                whileInView={visible}
+                viewport={{ once: true }}
+                transition={transition}
+                className={styles.teamTitle}>
                 <p>LEADERSHIP</p>
 
                 <h1>Meet the board of directors</h1>
-            </div>
+            </motion.div>
 
             <div className={styles.teamBox}>
                 <div className={styles.member}>
@@ -18,9 +42,19 @@ function Team() {
                     </div>
 
                     <div className={styles.memberInfo}>
-                        <h4>SMITA LIMAYE</h4>
+                        <motion.h4
+                            initial={hidden}
+                            whileInView={visible}
+                            viewport={{ once: true }}
+                            transition={transition}
+                        >SMITA LIMAYE</motion.h4>
 
-                        <p>DIRECTOR - OPERATIONS & CUSTOMER FULFILMENT</p>
+                        <motion.p
+                            initial={hidden}
+                            whileInView={visible}
+                            viewport={{ once: true }}
+                            transition={transition}
+                        >DIRECTOR - OPERATIONS & CUSTOMER FULFILMENT</motion.p>
 
                         <div className={styles.memberSocial}>
                             <div className={styles.memberSocialIcon}>
@@ -40,9 +74,19 @@ function Team() {
                     </div>
 
                     <div className={styles.memberInfo}>
-                        <h4>RAVI PANJWANI</h4>
+                        <motion.h4
+                            initial={hidden}
+                            whileInView={visible}
+                            viewport={{ once: true }}
+                            transition={transition}
+                        >RAVI PANJWANI</motion.h4>
 
-                        <p>FOUNDER</p>
+                        <motion.p
+                            initial={hidden}
+                            whileInView={visible}
+                            viewport={{ once: true }}
+                            transition={transition}
+                        >FOUNDER</motion.p>
 
                         <div className={styles.memberSocial}>
                             <div className={styles.memberSocialIcon}>
@@ -62,9 +106,19 @@ function Team() {
                     </div>
 
                     <div className={styles.memberInfo}>
-                        <h4>NIKHIL DASWANI</h4>
+                        <motion.h4
+                            initial={hidden}
+                            whileInView={visible}
+                            viewport={{ once: true }}
+                            transition={transition}
+                        >NIKHIL DASWANI</motion.h4>
 
-                        <p>DIRECTOR - MARKETING & BUSINESS DEVELOPMENT</p>
+                        <motion.p
+                            initial={hidden}
+                            whileInView={visible}
+                            viewport={{ once: true }}
+                            transition={transition}
+                        >DIRECTOR - MARKETING & BUSINESS DEVELOPMENT</motion.p>
 
                         <div className={styles.memberSocial}>
                             <div className={styles.memberSocialIcon}>
@@ -77,10 +131,9 @@ function Team() {
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-     );
+    );
 }
 
 export default Team;
