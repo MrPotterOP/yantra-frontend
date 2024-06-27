@@ -23,9 +23,9 @@ function FAQs() {
     }
 
     return ( 
-        <section id={`${styles.faqs} faqs`}>
+        <section id={`${styles.faqs}`} className={'faqs'}>
 
-            <div className={styles.faqsTitle}>
+            <div className={`${styles.faqsTitle}`}>
                 <p className={styles.titleText}>FAQS</p>
 
                 <h1 className={styles.title}>Response to FAQs</h1>

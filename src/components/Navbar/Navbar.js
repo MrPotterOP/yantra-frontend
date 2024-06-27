@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion} from 'framer-motion';
 import styles from './styles.module.css';
 import Image from 'next/image';
@@ -7,9 +7,7 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Link from 'next/link';
 
 
-function Navbar({doc}) {
-
-    console.log(doc, "XXXXXX");
+function Navbar() {
     
 
     
@@ -44,34 +42,18 @@ function Navbar({doc}) {
         }
     };
 
-
     const handleScroll = (href) => {
-        setActive(false); // Close the menu if it's open
+        setActive(false);
 
-        console.log(href);
-        // const element = document.querySelector(href);
-
-        // console.log(document);
-
-        // console.log(element);
-        // if (element) {
-        //     window.scrollTo({
-        //         top: element.offsetTop,
-        //         behavior: 'smooth'
-        //     });
-
-        //     element.scrollIntoView({ behavior: 'smooth' });
-        // }
-
-        const element = document.querySelector(`[data-scroll-to="${href}"]`);
-
-        console.log(element, document);
+        const element = document.body.getElementsByTagName('main')[0].getElementsByClassName(href.replace('#', ''));
 
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element[0].scrollIntoView({ behavior: 'smooth' });
         }
 
-    };
+    }
+
+
 
     return (
         <motion.nav id={styles.navbar}
@@ -106,13 +88,13 @@ function Navbar({doc}) {
                                 <span>{["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}</span>
                             </a> */}
 
-                            {/* <Link href={href} passHref legacyBehavior>
+                            <Link href={href} passHref legacyBehavior>
                                 <a onClick={() => handleScroll(href)} data-hover={["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}>
                                     <span>{["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}</span>
                                 </a>
-                            </Link> */}
+                            </Link>
 
-                            <ScrollLink
+                            {/* <ScrollLink
                                 to={href}
                                 spy={true}
                                 smooth={true}
@@ -121,7 +103,7 @@ function Navbar({doc}) {
                                 data-hover={["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}
                             >
                                 <span>{["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}</span>
-                            </ScrollLink>
+                            </ScrollLink> */}
 
                             
                         </motion.li>

@@ -27,7 +27,7 @@ function Products() {
 
 
     return ( 
-        <section id={styles.products} >
+        <section id={styles.products} className={'services'}>
 
             <div className={styles.productsTitle}>
                 <motion.h1

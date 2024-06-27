@@ -29,7 +29,7 @@ function Projects() {
 
 
     return ( 
-        <section id={styles.projects}>
+        <section id={styles.projects} className={'projects'}>
             <motion.div 
             initial={hidden}
             whileInView={show}
@@ -61,11 +61,11 @@ function Projects() {
 
                 <div className={styles.project}>
                     <div className={styles.projectImage}>
-                        <Image src="/images/project1.jpeg" alt="Project Image" width={500} height={900} />
+                        <Image src="/images/projectJp.jpg" alt="Project Image" width={500} height={900} />
                     </div>
 
                     <div className={styles.projectInfo}>
-                        <h4>AER LOUNGE, FOUR SEASONS MUMBAI</h4>
+                        <h4>PRIVATE VILLA - JAIPUR</h4>
 
                         <p className={styles.projectText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
@@ -104,11 +104,11 @@ function Projects() {
 
                 <div className={styles.project}>
                     <div className={styles.projectImage}>
-                        <Image src="/images/project3.jpeg" alt="Project Image" width={500} height={900} />
+                        <Image src="/images/projectHy.jpeg" alt="Project Image" width={500} height={900} />
                     </div>
 
                     <div className={styles.projectInfo}>
-                        <h4>COMMERCIAL BUILDING - PANJIM</h4>
+                        <h4>PRIVATE VILLA - HYDERABAD</h4>
 
                         <p className={styles.projectText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>

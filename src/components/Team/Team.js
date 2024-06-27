@@ -58,13 +58,16 @@ function Team() {
                         >DIRECTOR - OPERATIONS & CUSTOMER FULFILMENT</motion.p>
 
                         <div className={styles.memberSocial}>
-                            <div className={styles.memberSocialIcon}>
-                                <Image src="/images/linkedin.png" alt="Linkedin" width={20} height={20} />
-                            </div>
+                            <Link href="https://www.linkedin.com/in/smita-limaaye-83579827/" target="_blank" rel="noopener noreferrer">
+                                <div className={styles.memberSocialIcon}>
+                                    <Image src="/images/linkedin.png" alt="Linkedin" width={20} height={20} />
+                                </div>
 
-                            <div className={styles.memberSocialIcon}>
+                            </Link>
+
+                            {/* <div className={styles.memberSocialIcon}>
                                 <Image src="/images/email.png" alt="Email" width={20} height={20} />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -90,13 +93,20 @@ function Team() {
                         >FOUNDER</motion.p>
 
                         <div className={styles.memberSocial}>
-                            <div className={styles.memberSocialIcon}>
-                                <Image src="/images/linkedin.png" alt="Linkedin" width={20} height={20} />
-                            </div>
 
-                            <div className={styles.memberSocialIcon}>
-                                <Image src="/images/email.png" alt="Email" width={20} height={20} />
-                            </div>
+                            <Link href="https://www.linkedin.com/in/ravi-panjwani-57388022/" target="_blank" rel="noopener noreferrer" >
+
+                                <div className={styles.memberSocialIcon}>
+                                    <Image src="/images/linkedin.png" alt="Linkedin" width={20} height={20} />
+                                </div>
+
+                            </Link>
+
+                            <Link href="mailto:ravi.panjwani@yantraindia.com" target="_blank" rel="noopener noreferrer" >
+                                <div className={styles.memberSocialIcon}>
+                                    <Image src="/images/email.png" alt="Email" width={20} height={20} />
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -122,16 +132,16 @@ function Team() {
                         >DIRECTOR - MARKETING & BUSINESS DEVELOPMENT</motion.p>
 
                         <div className={styles.memberSocial}>
-                            <Link href="https://www.linkedin.com/in/nikhildaswani" target="_blank" rel="noopener noreferrer" >
+                            <Link href="https://www.linkedin.com/in/nikhil-daswani-12487a76/" target="_blank" rel="noopener noreferrer" >
                                 <div className={styles.memberSocialIcon}>
                                     <Image src="/images/linkedin.png" alt="Linkedin" width={20} height={20} />
                                 </div>
                             </Link>
                             
 
-                            <div className={styles.memberSocialIcon}>
+                            {/* <div className={styles.memberSocialIcon}>
                                 <Image src="/images/email.png" alt="Email" width={20} height={20} />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

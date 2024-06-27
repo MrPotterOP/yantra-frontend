@@ -25,7 +25,7 @@ function Hero() {
   }, []);
 
   return (
-    <section id={styles.hero}>
+    <section id={styles.hero} className={'hero'}>
       <div className={styles.heroBox}>
         <motion.div className={styles.heroImagesSlide}
           initial={{ opacity: 0.6, scale: 1.2 }}

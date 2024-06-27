@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 function About() {
     return ( 
-        <section id={styles.about}>
+        <section id={styles.about} className={'about'}>
             <div className={styles.aboutTitle}
                 
             >

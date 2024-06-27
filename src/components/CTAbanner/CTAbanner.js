@@ -3,9 +3,12 @@ import styles from './styles.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
+
 function CTAbanner() {
+
     return ( 
-        <section id={`${styles.banner} hero`}>
+        <section id={`${styles.banner}`} className={'footer'}>
             <div className={styles.bannerBox}>
                 <Image className={styles.bannerBg} src={"/images/bannerBg.jpg"} width={1100} height={900} alt="building architecture"></Image>
 
