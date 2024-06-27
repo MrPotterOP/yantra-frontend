@@ -4,6 +4,7 @@ import styles from './styles.module.css';
 import Image from 'next/image';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 function Team() {
 
@@ -121,9 +122,12 @@ function Team() {
                         >DIRECTOR - MARKETING & BUSINESS DEVELOPMENT</motion.p>
 
                         <div className={styles.memberSocial}>
-                            <div className={styles.memberSocialIcon}>
-                                <Image src="/images/linkedin.png" alt="Linkedin" width={20} height={20} />
-                            </div>
+                            <Link href="https://www.linkedin.com/in/nikhildaswani" target="_blank" rel="noopener noreferrer" >
+                                <div className={styles.memberSocialIcon}>
+                                    <Image src="/images/linkedin.png" alt="Linkedin" width={20} height={20} />
+                                </div>
+                            </Link>
+                            
 
                             <div className={styles.memberSocialIcon}>
                                 <Image src="/images/email.png" alt="Email" width={20} height={20} />

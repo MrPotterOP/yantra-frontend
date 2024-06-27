@@ -100,7 +100,7 @@
     .projectsBoxLeft {
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 160px;
     }
     
     .project {
@@ -142,7 +142,7 @@
     .projectsBoxRight {
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 160px;
         margin: 10px 0 0 0;
     }
     

@@ -10,24 +10,24 @@ import { useRef, useEffect, useState } from 'react';
 function Products() {
 
 
-    const ref = useRef(null);
+    // const ref = useRef(null);
 
-    const { scrollYProgress } = useScroll({
-        target: ref
-    });
+    // const { scrollYProgress } = useScroll({
+    //     target: ref
+    // });
 
-    const [till, setTill] = useState("-75%");
+    // const [till, setTill] = useState("-75%");
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", till]);
+    // const x = useTransform(scrollYProgress, [0, 1], ["0%", till]);
 
-    useEffect(()=>{
-        setTill(window.innerWidth <= 800 ? "0%" : "-75%");
-    }, [])
+    // useEffect(()=>{
+    //     setTill(window.innerWidth <= 800 ? "0%" : "-75%");
+    // }, [])
 
 
 
     return ( 
-        <section id={styles.products} ref={ref}>
+        <section id={styles.products} >
 
             <div className={styles.productsTitle}>
                 <motion.h1
@@ -39,7 +39,7 @@ function Products() {
             </div>
 
             <motion.div 
-            style={{ x }} className={styles.productsBox}>
+             className={styles.productsBox}>
 
                 <div
                  className={styles.product}>
@@ -163,6 +163,10 @@ function Products() {
                             <p>Choose from bioclimatic pergolas with adjustable louvres, fixed pergolas by Aluminco, or retractable fabric screen roofs. Each option offers durable construction and stylish design for year-round comfort.</p>
                         </div>
                 </div>
+
+                {/* <div className={styles.scrollNav}>
+                    <Image src="/images/outline-arrow.png" alt="Arrow" width={40} height={40} />
+                </div> */}
 
 
             </motion.div>

@@ -1,11 +1,19 @@
 'use client';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion} from 'framer-motion';
 import styles from './styles.module.css';
 import Image from 'next/image';
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Link from 'next/link';
 
-function Navbar() {
+
+function Navbar({doc}) {
+
+    console.log(doc, "XXXXXX");
+    
+
+    
+
     const [active, setActive] = useState(false);
 
     const navItemVariants = {
@@ -21,6 +29,8 @@ function Navbar() {
         })
     };
 
+
+
     const logoAndBtnVariants = {
         hidden: { opacity: 0, y: -20 },
         visible: {
@@ -32,6 +42,35 @@ function Navbar() {
                 stiffness: 50
             }
         }
+    };
+
+
+    const handleScroll = (href) => {
+        setActive(false); // Close the menu if it's open
+
+        console.log(href);
+        // const element = document.querySelector(href);
+
+        // console.log(document);
+
+        // console.log(element);
+        // if (element) {
+        //     window.scrollTo({
+        //         top: element.offsetTop,
+        //         behavior: 'smooth'
+        //     });
+
+        //     element.scrollIntoView({ behavior: 'smooth' });
+        // }
+
+        const element = document.querySelector(`[data-scroll-to="${href}"]`);
+
+        console.log(element, document);
+
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+
     };
 
     return (
@@ -63,12 +102,33 @@ function Navbar() {
                             animate="visible"
                             variants={navItemVariants}
                         >
-                            <a href={href} data-hover={["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}>
+                            {/* <a href={href} data-hover={["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}  onClick={() => router.push(href)}>
                                 <span>{["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}</span>
-                            </a>
+                            </a> */}
+
+                            {/* <Link href={href} passHref legacyBehavior>
+                                <a onClick={() => handleScroll(href)} data-hover={["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}>
+                                    <span>{["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}</span>
+                                </a>
+                            </Link> */}
+
+                            <ScrollLink
+                                to={href}
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                                data-hover={["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}
+                            >
+                                <span>{["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}</span>
+                            </ScrollLink>
+
+                            
                         </motion.li>
                     ))}
                 </ul>
+
+                
 
                 <motion.button
                     className={styles.btnCta}

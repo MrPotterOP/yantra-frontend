@@ -9,7 +9,7 @@
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
 
-  --fs-h1: 40px;
+  --fs-h1: 36px;
   --fs-h2: 34px;
   --fs-h3: 24px;
 
@@ -36,7 +36,8 @@
 
 @media (min-width: 62em){
   :root {
-    --fs-h1: 80px;
+    /* --fs-h1: 80px; */
+    --fs-h1: 75px;
     --fs-h2: 44px;
     --fs-h3: 30px;
   

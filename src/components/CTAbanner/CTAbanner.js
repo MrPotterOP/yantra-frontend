@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 function CTAbanner() {
     return ( 
-        <section id={styles.ctaBanner}>
+        <section id={`${styles.banner} hero`}>
             <div className={styles.bannerBox}>
                 <Image className={styles.bannerBg} src={"/images/bannerBg.jpg"} width={1100} height={900} alt="building architecture"></Image>
 
@@ -20,6 +20,8 @@ function CTAbanner() {
                             <p>Book a Call</p>
                             <Image src="/images/arrow.png" alt="Arrow" width={28} height={28} />
                         </Link>
+
+
                     </div>
 
                     

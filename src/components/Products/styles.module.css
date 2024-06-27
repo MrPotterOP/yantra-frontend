@@ -16,6 +16,7 @@
 }
 
 .productsBox {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -29,7 +30,7 @@
 }
 
 .productsBox::-webkit-scrollbar {
-    height: 4px;
+    height: 8px;
 
     background-color: var(--color-dimWhite);
     border-radius: 1em;
@@ -43,6 +44,7 @@
 
 .productsBox::-webkit-scrollbar-thumb {
     background-color: var(--color-grey);
+    cursor: pointer;
 }
 
 .product {
@@ -117,13 +119,39 @@
 
     margin-bottom: 30px;
 }
+/* 
+.scrollNav {
+    position: sticky;
+    top: 0;
+    right: -20px;
+    min-height: 600px;
+    width: 80px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 19%, rgba(255,255,255,1) 91%);
+}
+
+.scrollNav img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+
+    cursor: pointer;
+
+    filter: invert(1);
+
+    transition: all .4s ease-in-out;
+} */
+
+
+
+
+
 
 
 @media (min-width: 62em) {
     
     #products {
         margin: 100px 0;
-        height: 2890px;
     }
     
     .productsTitle {
@@ -135,15 +163,15 @@
         padding: 0 100px;
         transition: none;
 
-        overflow: visible;
+        /* overflow: visible;
 
         position: sticky;
         top: 60px;
-        left: 0;
+        left: 0; */
     }
     
-    .productsBox::-webkit-scrollbar {
-        display: none;
+    /* .productsBox::-webkit-scrollbar { */
+        /* display: none;
     }
     
     .productsBox::-webkit-scrollbar-track {
@@ -152,7 +180,7 @@
     
     .productsBox::-webkit-scrollbar-thumb {
         display: none;
-    }
+    } */
     
     .product {
         gap: 24px;

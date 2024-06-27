@@ -86,7 +86,7 @@ function Footer() {
                     <div className={styles.links}>
                         <Link href={"#"} data-hover="Contact"><span>Contact</span></Link>
                         <Link href={"#"} data-hover="Mission"><span>Mission</span></Link>
-                        <Link href={"#"} data-hover="Careers"><span>Careers</span></Link>
+                        <Link href={"#faqs"} data-hover="Careers"><span>Careers</span></Link>
                     </div>
                 </div>
 

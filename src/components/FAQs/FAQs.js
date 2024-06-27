@@ -23,7 +23,7 @@ function FAQs() {
     }
 
     return ( 
-        <section id={styles.faqs}>
+        <section id={`${styles.faqs} faqs`}>
 
             <div className={styles.faqsTitle}>
                 <p className={styles.titleText}>FAQS</p>

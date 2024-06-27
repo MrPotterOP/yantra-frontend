@@ -20,6 +20,7 @@
 .scroll div img {
     margin: 0 30px;
     filter: grayscale(100%);
+    object-fit: contain;
 }
 
 @keyframes scroll {
