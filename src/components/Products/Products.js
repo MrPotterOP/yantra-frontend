@@ -180,7 +180,7 @@ function Products() {
 
                     <div className={styles.productContext}>
                             <h4>Facade</h4>
-                            <p>Transform your building's exterior with our exclusive facades, designed to make a striking architectural statement. </p>
+                            <p>Transform your buildings exterior with our exclusive facades, designed to make a striking architectural statement. </p>
                         </div>
                 </div>
 
