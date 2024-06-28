@@ -44,7 +44,7 @@ function Products() {
                 <div
                  className={styles.product}>
                     <div className={styles.productImage}>
-                        <Image src="/images/product1.jpg" alt="Product Image" width={500} height={900} />
+                        <Image src="/images/product1.jpeg" alt="Product Image" width={500} height={900} />
 
                         <div className={styles.productFeatures}>
                                 <ul>
@@ -104,7 +104,7 @@ function Products() {
 
                 <div className={styles.product}>
                     <div className={styles.productImage}>
-                        <Image src="/images/product4.jpg" alt="Product Image" width={500} height={900} />
+                        <Image src="/images/product4.png" alt="Product Image" width={500} height={900} />
 
                         <div className={styles.productFeatures}>
                                 <ul>
@@ -125,7 +125,7 @@ function Products() {
 
                 <div className={styles.product}>
                     <div className={styles.productImage}>
-                        <Image src="/images/product5.jpeg" alt="Product Image" width={500} height={900} />
+                        <Image src="/images/product5.jpg" alt="Product Image" width={500} height={900} />
 
                         <div className={styles.productFeatures}>
                                 <ul>
@@ -161,6 +161,26 @@ function Products() {
                     <div className={styles.productContext}>
                             <h4>Retractable & Fixed Pergolas</h4>
                             <p>Choose from bioclimatic pergolas with adjustable louvres, fixed pergolas by Aluminco, or retractable fabric screen roofs. Each option offers durable construction and stylish design for year-round comfort.</p>
+                        </div>
+                </div>
+
+
+                <div className={styles.product}>
+                    <div className={styles.productImage}>
+                        <Image src="/images/product7.jpg" alt="Product Image" width={500} height={900} />
+
+                        <div className={styles.productFeatures}>
+                                <ul>
+                                    <li>Ventilated Facades</li>
+                                    <li>Double-Skin Facades</li>
+                                </ul>
+                        </div> 
+            
+                    </div>
+
+                    <div className={styles.productContext}>
+                            <h4>Facade</h4>
+                            <p>Transform your building's exterior with our exclusive facades, designed to make a striking architectural statement. </p>
                         </div>
                 </div>
 

@@ -47,6 +47,20 @@ function Footer() {
                             <Image src="/images/arrow.png" alt="Arrow" width={28} height={28} />
                         </button>
                     </div>
+
+                    <div className={styles.address}>
+                            <p>1203, Aston Building, SunderVan Complex Road, 
+                                Shastri Nagar, Above Mercedes Showroom,
+                                Andheri West, Mumbai - 400053</p>
+                            
+                            <div className={styles.socials}>
+                                <Link href={"https://www.instagram.com/yantrawindows/?hl=en"} target="_blank" rel="noreferrer" data-hover="Instagram"><Image src="/images/insta.png" alt="Instagram" width={28} height={28} /></Link>
+                                <Link href={"https://www.facebook.com/YantraMumbai/"} target="_blank" rel="noreferrer" data-hover="Facebook"><Image src="/images/fb.png" alt="Facebook" width={28} height={28} /></Link>
+                                <Link href={"https://www.linkedin.com/company/yantra-aluminium-window-systems-private-limited/mycompany/"} target="_blank" rel="noreferrer" data-hover="LinkedIn"><Image src="/images/linkedin.png" alt="LinkedIn" width={28} height={28} /></Link>
+                                <Link href={"https://www.youtube.com/channel/UC0l8ePP0WfD791MVF4dzwBA"} target="_blank" rel="noreferrer" data-hover="Youtube"><Image src="/images/yt.png" alt="Youtube" width={24} height={24} /></Link>
+                            </div>
+
+                        </div>
                 </div>
             </div>
 
