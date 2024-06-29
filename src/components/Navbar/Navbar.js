@@ -89,8 +89,8 @@ function Navbar() {
                             </a> */}
 
                             <Link href={href} passHref legacyBehavior>
-                                <a onClick={() => handleScroll(href)} data-hover={["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}>
-                                    <span>{["HOME", "ABOUT US", "SERVICES", "WORK", "CONTACT", "BLOG", "FAQ"][index]}</span>
+                                <a onClick={() => handleScroll(href)} data-hover={["HOME", "ABOUT US", "PRODUCTS", "WORK", "CONTACT", "BLOG", "FAQ"][index]}>
+                                    <span>{["HOME", "ABOUT US", "PRODUCTS", "WORK", "CONTACT", "BLOG", "FAQ"][index]}</span>
                                 </a>
                             </Link>
 
@@ -118,7 +118,7 @@ function Navbar() {
                     animate="visible"
                     variants={logoAndBtnVariants}
                 >
-                    <a href="#">Visit Us</a>
+                    <a href="https://calendly.com/yantrawindows/visit-to-the-yantra-experience-centre-andheri-west" target={"_blank"}>Visit Us</a>
                     <Image src="/images/arrow.png" alt="Arrow" width={28} height={28} />
                 </motion.button>
 

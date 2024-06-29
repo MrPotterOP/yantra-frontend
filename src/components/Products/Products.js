@@ -35,7 +35,7 @@ function Products() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
-                >We Offer products like</motion.h1>
+                >We Offer products </motion.h1>
             </div>
 
             <motion.div 
@@ -66,6 +66,27 @@ function Products() {
                     </div>
                 </div>
 
+                {/* 2 */}
+                <div className={styles.product}>
+                    <div className={styles.productImage}>
+                        <Image src="/images/product7.jpg" alt="Product Image" width={500} height={900} />
+
+                        <div className={styles.productFeatures}>
+                                <ul>
+                                    <li>Ventilated Facades</li>
+                                    <li>Double-Skin Facades</li>
+                                </ul>
+                        </div> 
+            
+                    </div>
+
+                    <div className={styles.productContext}>
+                            <h4>Facade</h4>
+                            <p>Transform your buildings exterior with our exclusive facades, designed to make a striking architectural statement. </p>
+                        </div>
+                </div>
+
+                {/* 3 */}
                 <div className={styles.product}>
                     <div className={styles.productImage}>
                         <Image src="/images/product2.jpg" alt="Product Image" width={500} height={900} />
@@ -84,6 +105,7 @@ function Products() {
                     </div>
                 </div>
 
+                {/* 4 */}
                 <div className={styles.product}>
                     <div className={styles.productImage}>
                         <Image src="/images/product3.jpg" alt="Product Image" width={500} height={900} />
@@ -102,6 +124,9 @@ function Products() {
                     </div>
                 </div>
 
+
+
+                {/* 5 */}
                 <div className={styles.product}>
                     <div className={styles.productImage}>
                         <Image src="/images/product4.png" alt="Product Image" width={500} height={900} />
@@ -122,6 +147,21 @@ function Products() {
                         <p>These innovative solutions provide flexible, stylish coverage that adapts to your needs, offering protection and enhancing outdoor living.</p>
                     </div>
                 </div>
+
+
+                {/* 6 */}
+
+
+                {/* 7 */}
+
+
+
+
+                
+
+                
+
+                
 
                 <div className={styles.product}>
                     <div className={styles.productImage}>
@@ -165,24 +205,7 @@ function Products() {
                 </div>
 
 
-                <div className={styles.product}>
-                    <div className={styles.productImage}>
-                        <Image src="/images/product7.jpg" alt="Product Image" width={500} height={900} />
-
-                        <div className={styles.productFeatures}>
-                                <ul>
-                                    <li>Ventilated Facades</li>
-                                    <li>Double-Skin Facades</li>
-                                </ul>
-                        </div> 
-            
-                    </div>
-
-                    <div className={styles.productContext}>
-                            <h4>Facade</h4>
-                            <p>Transform your buildings exterior with our exclusive facades, designed to make a striking architectural statement. </p>
-                        </div>
-                </div>
+                
 
                 {/* <div className={styles.scrollNav}>
                     <Image src="/images/outline-arrow.png" alt="Arrow" width={40} height={40} />

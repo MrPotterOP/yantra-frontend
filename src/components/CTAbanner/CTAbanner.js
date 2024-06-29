@@ -27,7 +27,7 @@ function CTAbanner() {
                     <div className={styles.contextBox}>
                         <h1>Experience the Best in Window Innovation</h1>
 
-                        <Link href="#" >
+                        <Link href="https://calendly.com/yantrawindows/visit-to-the-yantra-experience-centre-andheri-west" target={"_blank"} >
                             <p>Book a Visit With Us</p>
                             <Image src="/images/arrow.png" alt="Arrow" width={28} height={28} />
                         </Link>
