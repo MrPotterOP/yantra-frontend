@@ -10,7 +10,29 @@ import FAQs from "@/components/FAQs/FAQs";
 import CTAbanner from "@/components/CTAbanner/CTAbanner";
 import Footer from "@/components/Footer/Footer";
 
+
+
+export const metadata = {
+  title: "Home | Yantra - WINDOWS DOORS SKYLIGHTS BALUSTRADES",
+  openGraph: {
+    type: 'website',
+    title: "Home | Yantra - WINDOWS DOORS SKYLIGHTS BALUSTRADES",
+    description: "Discover Yantra's custom home solutions, including doors, windows, balustrades, retractable & fixed glass roofs, and pergolas. We offer lifetime warranties, annual maintenance contracts, and a Pan India presence. Visit us to enhance your living spaces with innovative designs",
+    url: 'https://www.yantraindia.com/',
+    image: '/images/about.jpg',
+  },
+  viewport: 'width=device-width, initial-scale=1.0',
+  charSet: 'utf-8',
+  themeColor: '#FFFFFF',
+  mobileWebAppCapable: 'yes',
+  language: 'en-US'
+
+}
+
 export default function Home() {
+
+
+  
 
 
 
