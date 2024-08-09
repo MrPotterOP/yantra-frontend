@@ -227,7 +227,7 @@ function Tnc() {
                     No Wet work will be carried out by <strong>Yantra Aluminium Window Systems Pvt Ltd.</strong> <br /> <br />
                     The Site should be kept dry, clean, and clear from obstruction, and safe, for installing windows. <br /> <br />
                     Temporary electric and water connections to be provided at the site. <br /> <br />
-                    In case of a delay of more than one month in execution of installation on account of client, re-fabrication or any extra costs (Over and above the PO) involved, if any, will be at Client's risk & cost and payable directly before the material is taken up for installation.
+                    In case of a delay of more than one month in execution of installation on account of client, re-fabrication or any extra costs (Over and above the PO) involved, if any, will be at Clients risk & cost and payable directly before the material is taken up for installation.
                     </p>
                 </motion.div>
 
