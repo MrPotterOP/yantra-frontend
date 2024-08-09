@@ -1,9 +1,8 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { motion} from 'framer-motion';
 import styles from './styles.module.css';
 import Image from 'next/image';
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Link from 'next/link';
 
 
@@ -66,7 +65,7 @@ function Navbar() {
         >
             <div className={styles.navBox}>
                 <motion.a
-                    href="#"
+                    href="/#hero"
                     className={styles.navLogo}
                     initial="hidden"
                     animate="visible"

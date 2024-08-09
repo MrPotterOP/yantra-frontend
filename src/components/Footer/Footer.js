@@ -22,7 +22,7 @@ function Footer() {
                     <div className={styles.links}>
                         <Link href={"#"} data-hover="Contact"><span>Contact</span></Link>
                         <Link href={"#"} data-hover="Mission"><span>Mission</span></Link>
-                        <Link href={"#faqs"} data-hover="Careers"><span>Careers</span></Link>
+                        <Link href={"/#faqs"} data-hover="Careers"><span>Careers</span></Link>
                     </div>
                 </div>
 
@@ -31,7 +31,7 @@ function Footer() {
 
                     <div className={styles.links}>
                         <Link href={"#"} data-hover="Privacy Policy"><span>Privacy Policy</span></Link>
-                        <Link href={"#"} data-hover="Terms of Sales"><span>Terms of Sales</span></Link>
+                        <Link href={"/tnc"} data-hover="Terms of Sales"><span>Terms of Sales</span></Link>
                         <Link href={"#"} data-hover="Work With Us"><span>Work With Us</span></Link>
                     </div>
                 </div>

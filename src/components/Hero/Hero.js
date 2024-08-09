@@ -16,7 +16,7 @@ function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSlide((prevSlide) => {
-        const newSlide = (prevSlide.activeSlide + 1) % 3;
+        const newSlide = (prevSlide.activeSlide + 1) % 5;
         return { activeSlide: newSlide, reset: newSlide === 0 };
       });
     }, 7000);
@@ -53,12 +53,31 @@ function Hero() {
             width={2000}
             height={1180}
           />
+
+          <Image
+            className={slide.activeSlide === 3 ? styles.active : ''}
+            src="/images/hero4.jpeg"
+            alt="Hero Image"
+            width={2000}
+            height={1180}
+          />
+
+
+          <Image
+            className={slide.activeSlide === 4 ? styles.active : ''}
+            src="/images/hero5.jpeg"
+            alt="Hero Image"
+            width={2000}
+            height={1180}
+          />
+
+
         </motion.div>
 
         <motion.div 
         initial={{ opacity: 0, x: 80 }}
         animate={{ opacity: 1, x: 0 }}
-        className={styles.heroNavigation} onClick={() => setSlide((prevSlide) => ({ ...prevSlide, activeSlide: (prevSlide.activeSlide + 1) % 3 }))}> 
+        className={styles.heroNavigation} onClick={() => setSlide((prevSlide) => ({ ...prevSlide, activeSlide: (prevSlide.activeSlide + 1) % 5 }))}> 
             <Image src="/images/outline-arrow.png" alt="Arrow" width={40} height={40} />
         </motion.div>
 
@@ -74,7 +93,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeInOut' }}
           >
-            {[0, 1, 2].map((item, index) => (
+            {[0, 1, 2, 3, 4].map((item, index) => (
               <div
                 key={index}
                 className={`${styles.sliderBar} ${

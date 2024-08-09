@@ -3,8 +3,7 @@
 import styles from './styles.module.css';
 import Image from 'next/image';
 
-import {motion, useTransform, useScroll} from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
+import {motion} from 'framer-motion';
 
 
 function Products() {
