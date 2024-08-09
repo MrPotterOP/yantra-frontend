@@ -12,8 +12,34 @@ function Tnc() {
     // Create refs for each section
     const refs = useRef(terms.map(() => useRef(null)));
 
-    // Create an array of inView states for each section
-    const inViewStates = terms.map((_, i) => useInView(refs.current[i], { triggerOnce: false }));
+    // Create an array to store inView states
+    const [inViewStates, setInViewStates] = useState(terms.map(() => false));
+
+    // Use useEffect to set up the inView observers
+    useEffect(() => {
+        const observers = terms.map((_, i) => {
+            return new IntersectionObserver(
+                ([entry]) => {
+                    setInViewStates(prev => {
+                        const newState = [...prev];
+                        newState[i] = entry.isIntersecting;
+                        return newState;
+                    });
+                },
+                { triggerOnce: false }
+            );
+        });
+
+        terms.forEach((_, i) => {
+            if (refs.current[i].current) {
+                observers[i].observe(refs.current[i].current);
+            }
+        });
+
+        return () => {
+            observers.forEach(observer => observer.disconnect());
+        };
+    }, []);
 
     useEffect(() => {
         // Find the index of the first section that is in view
@@ -23,8 +49,7 @@ function Tnc() {
         }
     }, [inViewStates]);
 
-
-    const hidden = {
+        const hidden = {
         opacity: 0,
         y: 50
     }
@@ -208,6 +233,7 @@ function Tnc() {
             </div>
         </section>
     );
+
 }
 
 export default Tnc;
