@@ -30,8 +30,6 @@ function Footer() {
                     <p className={styles.linkTitle}>RESOURCES</p>
 
                     <div className={styles.links}>
-                        <Link href={"#"} data-hover="Privacy Policy"><span>Privacy Policy</span></Link>
-                        <Link href={"/tnc"} data-hover="Terms of Sales"><span>Terms of Sales</span></Link>
                         <Link href={"#"} data-hover="Work With Us"><span>Work With Us</span></Link>
                     </div>
                 </div>
