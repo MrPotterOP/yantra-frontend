@@ -22,8 +22,8 @@ function Advantages() {
         <section id={styles.advantages}>
                     <div className={styles.advantagesBox}>
                         <motion.div 
-                        initial={{ opacity: 0.6, scale: 1.2 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0.6  }}
+                        whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, ease: 'easeInOut' }}
                         className={styles.advantagesBg}>

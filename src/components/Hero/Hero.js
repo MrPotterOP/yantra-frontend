@@ -100,7 +100,7 @@ function Hero() {
                   slide.activeSlide === index ? styles.active : ''
                 }`}
               >
-                <div className={styles.sliderBarProgress}></div>
+                <div className={`${(index > slide.activeSlide) ? styles.progressFill : ''} ${styles.sliderBarProgress}`}></div>
               </div>
             ))}
           </motion.div>
@@ -124,6 +124,3 @@ function Hero() {
 }
 
 export default Hero;
-
-
-           

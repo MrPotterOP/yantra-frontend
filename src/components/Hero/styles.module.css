@@ -83,6 +83,10 @@
     transition: opacity 0.5s;
 }
 
+.progressFill {
+    width: 100%;
+}
+
 .sliderBar.active .sliderBarProgress {
     animation: fillBar 7s linear forwards;
     opacity: 1;

@@ -75,7 +75,7 @@ function Navbar() {
                 </motion.a>
 
                 <ul id="nav-mobile" className={`${styles.navMenu} ${active ? styles.active : ""}`}>
-                    {['#hero', '#about', '#services', '#projects', '#footer', '#', '#faqs'].map((href, index) => (
+                    {['#hero', '#about', '#services', '#projects', '/contact', '#', '#faqs'].map((href, index) => (
                         <motion.li
                             key={index}
                             custom={index}

@@ -9,6 +9,8 @@ import Team from "@/components/Team/Team";
 import FAQs from "@/components/FAQs/FAQs";
 import CTAbanner from "@/components/CTAbanner/CTAbanner";
 import Footer from "@/components/Footer/Footer";
+import PopUpForm from "@/components/PopUpForm/PopUpForm";
+import StickyBtns from "@/components/StickyBtns/StickyBtns";
 
 
 
@@ -29,16 +31,14 @@ export const metadata = {
 
 }
 
+
 export default function Home() {
-
-
-  
-
-
 
   return (
     <main>
       <Navbar />
+      <StickyBtns />
+      <PopUpForm />
       <Hero />
       <InfiniteScrollImages />
       <About />
