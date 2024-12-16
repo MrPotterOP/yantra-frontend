@@ -339,9 +339,18 @@ import Image from 'next/image';
 
 import { useState, useEffect } from 'react';
 
+import {useRouter} from 'next/navigation';
+
 import submitJson from "submitjson";
 
 function PopUpForm() {
+
+    const router = useRouter();
+
+    const redirectToThankyou = (name) => {
+        sessionStorage.setItem('name', name);
+        router.push('/thankyou');
+    };
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -432,6 +441,8 @@ function PopUpForm() {
                             message: 'Your enquiry has been submitted successfully!'
                         });
 
+                        redirectToThankyou(formData.name);
+
                         setFormData({
                             name: '',
                             mobile: '',
@@ -464,6 +475,8 @@ function PopUpForm() {
         setSubmitStatus({ ...submitStatus, show: false });
         setIsOpen(false);
     };
+
+    
 
     return (
         <>

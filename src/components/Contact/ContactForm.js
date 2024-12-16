@@ -4,10 +4,23 @@ import styles from './styles.module.css';
 import Image from 'next/image';
 import { useState } from 'react';
 
+import { useRouter } from 'next/navigation';
+
+
+
 import Link from 'next/link';
 import submitJson from "submitjson";
 
 function ContactForm() {
+
+    const router = useRouter();
+
+
+    const redirectToThankyou = (name) => {
+        sessionStorage.setItem('name', name);
+        router.push('/thankyou');
+    };
+
     const sj = new submitJson({
         apiKey: process.env.NEXT_PUBLIC_SUBMIT_JSON_KEY,
         endpoint: process.env.NEXT_PUBLIC_SUBMIT_JSON_ENDPOINT
@@ -190,6 +203,8 @@ function ContactForm() {
                             loading: false,
                             message: 'Your enquiry has been submitted successfully!'
                         });
+
+                        redirectToThankyou(formData.name);
 
                         setFormData({
                             name: '',
