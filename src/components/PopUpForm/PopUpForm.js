@@ -348,7 +348,7 @@ function PopUpForm() {
     const router = useRouter();
 
     const redirectToThankyou = (name) => {
-        sessionStorage.setItem('name', name);
+        // sessionStorage.setItem('name', name);
         router.push('/thankyou');
     };
 

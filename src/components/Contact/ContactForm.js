@@ -17,7 +17,13 @@ function ContactForm() {
 
 
     const redirectToThankyou = (name) => {
-        sessionStorage.setItem('name', name);
+        // sessionStorage.setItem('name', name);
+
+        // router.push({
+        //     href: '/thankyou',
+        //     query: { name }
+        // })
+
         router.push('/thankyou');
     };
 
@@ -230,6 +236,8 @@ function ContactForm() {
                         loading: false,
                         message: 'Failed to submit enquiry. Please try again or email us at sales@yantraindia.com'
                     });
+
+                    console.error("Error submitting form:", error);
                 });
         }
     };
