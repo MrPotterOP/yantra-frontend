@@ -16,7 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTAG_ID} />
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}
+      <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTAG_ID}`}
+height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
+      </body>
       <GoogleAnalytics gtagId={process.env.NEXT_PUBLIC_GTAG_ID} />
     </html>
   );
