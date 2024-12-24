@@ -43,7 +43,7 @@ function ThankYou() {
     return ( 
         <main id={styles.thanks}>
             <div className={styles.thanksBox}>
-                
+
                 <div className={styles.thanksBg}>
                     <Image src="/images/thanks.gif" alt="Thanks" width={140} height={140}></Image>
                 </div>
@@ -52,6 +52,9 @@ function ThankYou() {
                     <p>Your enquiry has been received and we will get back to you soon. <br /> <span>you will be redirected to the home page in {timer} seconds</span></p>
                 </div>
             </div>
+
+
+            
         </main>
      );
 }
