@@ -584,10 +584,11 @@ function PopUpForm() {
                                  onChange={handleInputChange}
                                  required>
                                  <option value="Select Requirement">Select Requirement</option>
-                                 <option value="Design">Design</option>
-                                 <option value="Architecture">Architecture</option>
-                                 <option value="Interior">Interior</option>
-                                 <option value="Construction">Construction</option>
+                                 <option value="Apartment">Apartment</option>
+                                 <option value="Villa">Villa</option>
+                                 <option value="Commercial">Commercial</option>
+                                 <option value="Hospitality">Hospitality</option>
+                                 <option value="Other">Other</option>
                              </select>
                              {formErrors.requirement && <p className={styles.error}>{formErrors.requirement}</p>}
                          </div>
