@@ -55,7 +55,7 @@ function Projects() {
                     <div className={styles.projectInfo}>
                         <h4>AER LOUNGE, FOUR SEASONS MUMBAI</h4>
 
-                        <p className={styles.projectText}>One of our landmark projects featuring Libart's lean-to system for creating a seamless indoor-outdoor experience. The roof glass panels come with built-in blinds inside the insulated units, offering ideal shielding from the sun's glare.</p>
+                        <p className={styles.projectText}>One of our landmark projects featuring Libart&apos;s lean-to system for creating a seamless indoor-outdoor experience. The roof glass panels come with built-in blinds inside the insulated units, offering ideal shielding from the sun&apos;s glare.</p>
                     </div>
                 </div>
 
