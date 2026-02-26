@@ -3,6 +3,13 @@ import styles from './styles.module.css';
 import Image from "next/image";
 
 function Footer() {
+
+    const CareerMail = {
+        subject: "Application for [Job Title] - [Your Name]",
+        body: `(Kindly ensure your resume or CV is attached when submitting your application. You can add your introduction or relevant details below)`,
+        email: "careers@yantraindia.com"
+    }
+
     return (
         <footer id={styles.footer}>
             <div className={styles.footerMain}>
@@ -22,7 +29,7 @@ function Footer() {
                     <div className={styles.links}>
                         <Link href={"/contact"} data-hover="Contact"><span>Contact</span></Link>
                         <Link href={"#"} data-hover="Mission"><span>Mission</span></Link>
-                        <Link href={"/#faqs"} data-hover="Careers"><span>Careers</span></Link>
+                        <Link href={`mailto:${CareerMail.email}?subject=${CareerMail.subject}&body=${CareerMail.body}`} data-hover="Careers"><span>Careers</span></Link>
                     </div>
                 </div>
 
@@ -30,7 +37,7 @@ function Footer() {
                     <p className={styles.linkTitle}>RESOURCES</p>
 
                     <div className={styles.links}>
-                        <Link href={"#"} data-hover="Work With Us"><span>Work With Us</span></Link>
+                        <Link href={`mailto:${CareerMail.email}?subject=${CareerMail.subject}&body=${CareerMail.body}`} data-hover="Work With Us"><span>Work With Us</span></Link>
                     </div>
                 </div>
 
@@ -47,18 +54,18 @@ function Footer() {
                     </div>
 
                     <div className={styles.address}>
-                            <p>1203, Aston Building, SunderVan Complex Road, 
-                                Shastri Nagar, Above Mercedes Showroom,
-                                Andheri West, Mumbai - 400053</p>
-                            
-                            <div className={styles.socials}>
-                                <Link href={"https://www.instagram.com/yantrawindows/?hl=en"} target="_blank" rel="noreferrer" data-hover="Instagram"><Image src="/images/insta.png" alt="Instagram" width={28} height={28} /></Link>
-                                <Link href={"https://www.facebook.com/YantraMumbai/"} target="_blank" rel="noreferrer" data-hover="Facebook"><Image src="/images/fb.png" alt="Facebook" width={28} height={28} /></Link>
-                                <Link href={"https://www.linkedin.com/company/yantra-aluminium-window-systems-private-limited/mycompany/"} target="_blank" rel="noreferrer" data-hover="LinkedIn"><Image src="/images/linkedin.png" alt="LinkedIn" width={28} height={28} /></Link>
-                                <Link href={"https://www.youtube.com/channel/UC0l8ePP0WfD791MVF4dzwBA"} target="_blank" rel="noreferrer" data-hover="Youtube"><Image src="/images/yt.png" alt="Youtube" width={24} height={24} /></Link>
-                            </div>
+                        <p>1203, Aston Building, SunderVan Complex Road,
+                            Shastri Nagar, Above Mercedes Showroom,
+                            Andheri West, Mumbai - 400053</p>
 
+                        <div className={styles.socials}>
+                            <Link href={"https://www.instagram.com/yantrawindows/?hl=en"} target="_blank" rel="noreferrer" data-hover="Instagram"><Image src="/images/insta.png" alt="Instagram" width={28} height={28} /></Link>
+                            <Link href={"https://www.facebook.com/YantraMumbai/"} target="_blank" rel="noreferrer" data-hover="Facebook"><Image src="/images/fb.png" alt="Facebook" width={28} height={28} /></Link>
+                            <Link href={"https://www.linkedin.com/company/yantra-aluminium-window-systems-private-limited/mycompany/"} target="_blank" rel="noreferrer" data-hover="LinkedIn"><Image src="/images/linkedin.png" alt="LinkedIn" width={28} height={28} /></Link>
+                            <Link href={"https://www.youtube.com/channel/UC0l8ePP0WfD791MVF4dzwBA"} target="_blank" rel="noreferrer" data-hover="Youtube"><Image src="/images/yt.png" alt="Youtube" width={24} height={24} /></Link>
                         </div>
+
+                    </div>
                 </div>
             </div>
 
